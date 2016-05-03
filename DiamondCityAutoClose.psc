@@ -8,7 +8,7 @@ Event OnInit()
 	debug.trace("DiamondCityAutoClose - DialogueDiamondCityEntrance = " + DialogueDiamondCityEntrance.GetStage())
 
 	; Only run when the DialogueDiamondCityEntrance is progressed far enough.
-	If (DialogueDiamondCityEntrance.GetStage() >= 100)
+	If (DialogueDiamondCityEntrance.GetStage() > 25)
 		CloseGate()
 		debug.trace("DiamondCityAutoClose - CloseGate OnInit")
 	Endif
@@ -19,7 +19,7 @@ Event OnCellLoad()
 	debug.trace("DiamondCityAutoClose - DialogueDiamondCityEntrance = " + DialogueDiamondCityEntrance.GetStage())
 
 	; Only run when the DialogueDiamondCityEntrance is progressed far enough.
-	If (DialogueDiamondCityEntrance.GetStage() >= 100)
+	If (DialogueDiamondCityEntrance.GetStage() > 25)
 		CloseGate()
 		debug.trace("DiamondCityAutoClose - CloseGate OnCellLoad")
 	Endif
